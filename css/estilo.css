@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Josefin+Sans:ital,wght@1,300&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 2rem;
+    font-family: 'Cormorant SC', serif;
+    background-color: #67448b;
+
+}
+
+.encabezado {
+    background-image: url("../img/exterior-modern-white-luxury-car.jpg");
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    opacity: 80%;
+    grid-area: header;
+ 
+}
+
+.encabezado div {
+    height: 10rem;
+    width: 50rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold
+    color #2b183f;
+    text-shadow: 4px 3px #3f2758;
+} 
+
+nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    grid-area: nav;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #5d3d7e;
+}
+
+
+section {
+    margin: 1rem;
+    padding: 0.5rem;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+height: 50rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+section img {
+    width: 20rem;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+
+section button {
+    border-radius: 10px;
+    background-color: #533572;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-bottom: 1rem; -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+footer {
+    padding-top: 2rem;
+    background-color: #2b183f;
+    text-align: center;
+    grid-area: footer;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 2rem;
+}
+
+.autoA {
+    grid-area: autoA;
+
+}
+
+.autoB {
+    grid-area: autoB;
+
+}
+
+.autoC {
+    grid-area: autoC;
+}
+
+.autoD {
+    grid-area: autoD;
+}
+
+.gridPadre {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "autoA autoB autoC autoD"
+    "footer footer footer footer"
+    ;
+}
+
+@media (min-width:700px) and (max-width:1100px) {
+    .gridPadre {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "autoA autoB"
+        "autoC autoD"
+        "footer footer"
+
+    }
+
+    section {
+        text-align: center;
+    }
+
+    section img {
+        width: 300px;
+    }
+}
+
+@media (max-width:699px) {
+    .gridPadre {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "autoA"
+        "autoB"
+        "autoC"
+        "autoD"
+        "footer"
+    }
+
+    html {
+        font-size: 80%;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .encabezado div{
+        max-width: 90%;
+    }
+
+    section {
+        text-align: center; 
+    }
+
+    section img {
+        width: 300px;
+    }
+}
+
